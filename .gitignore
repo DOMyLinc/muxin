@@ -1,0 +1,47 @@
+# CodeIgniter 4 specific
+.env
+.env.*.php
+.DS_Store
+
+# Composer
+vendor/
+composer.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+
+# Logs
+*.log
+writable/logs/*
+!writable/logs/.gitkeep
+
+# Cache
+writable/cache/*
+!writable/cache/.gitkeep
+
+# Session
+writable/session/*
+!writable/session/.gitkeep
+
+# Uploads
+writable/uploads/*
+!writable/uploads/.gitkeep
+
+# Database
+*.sqlite
+*.sqlite3
+
+# OS
+Thumbs.db
+.DS_Store
+ehthumbs.db
+
+# Project specific
+node_modules/
+dist/
+build/
