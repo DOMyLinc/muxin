@@ -1,0 +1,26 @@
+# Disable directory browsing
+Options -Indexes
+
+# Rewrite engine
+RewriteEngine On
+
+# If you installed CodeIgniter in a subfolder, change this line to match the subfolder name
+# Example: RewriteBase /subfolder/
+RewriteBase /
+
+# Protect sensitive files
+RewriteRule ^(\.git|\.htaccess) - [F]
+
+# Allow these directories and files to be displayed directly:
+# - index.php
+# - robots.txt
+# - favicon.ico
+RewriteCond %{REQUEST_URI} ^/index\.php
+RewriteCond %{REQUEST_URI} ^/robots\.txt
+RewriteCond %{REQUEST_URI} ^/favicon\.ico
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Rewrite all other URLs to index.php
+RewriteRule ^(.*)$ index.php/$1 [L]
