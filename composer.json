@@ -1,0 +1,24 @@
+{
+  "name": "domylinc/muxin",
+  "description": "CodeIgniter project with MySQL for cPanel hosting",
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "codeigniter4/framework": "^4.4"
+  },
+  "require-dev": {
+    "mikey179/vfsstream": "^1.6",
+    "phpunit/phpunit": "^9.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app",
+      "Config\\": "app/Config"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "post-update-cmd": [
+      "bash -c \"if [ -f bin/spark ]; then chmod +x bin/spark; fi\""
+    ]
+  }
+}
